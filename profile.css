@@ -1,97 +1,122 @@
+/* Reset default styles and set the font family */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Set a light background color */
 }
 
+/* Style for the profile container */
 .profile {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Set the width to 100% of the viewport */
+    max-width: 600px; /* Set a maximum width for the profile */
+    margin: 20px auto; /* Center the profile horizontally */
+    padding: 20px; /* Add some padding inside the profile */
+    background-color: #fff; /* Set a white background color */
+    border-radius: 8px; /* Add rounded corners to the profile */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Lay out children vertically */
 }
 
+/* Center-align the heading */
 h1 {
     text-align: center;
-    color: #333;
+    color: #333; /* Set a dark text color */
 }
 
+/* Style for the profile picture section */
 .profile-picture {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Center-align the content */
+    margin-bottom: 20px; /* Add some space below the profile picture */
 }
 
+/* Style for the profile picture */
 .profile-picture img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #333;
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+    border: 2px solid #333; /* Add a border around the image */
 }
 
+/* Style for the "Change Profile Picture" button */
 .profile-picture button {
-    display: block;
-    margin-top: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin-top: 10px; /* Add some space above the button */
+    background-color: #333; /* Set a dark background color */
+    color: #fff; /* Set a light text color */
+    border: none; /* Remove the border */
+    padding: 5px 10px; /* Add some padding */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
+/* Style for the username and password sections */
 .username,
 .password {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Add some space below each section */
 }
 
+/* Style for the labels in the username and password sections */
 .username label,
 .password label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+    display: block; /* Display the labels as block elements */
+    margin-bottom: 5px; /* Add some space below each label */
+    color: #333; /* Set a dark text color */
 }
 
+/* Style for the input fields in the username and password sections */
 .username input,
 .password input {
-    width: calc(100% - 120px);
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    width: 100%; /* Set the width of the input fields to 100% */
+    padding: 5px; /* Add some padding */
+    margin-bottom: 10px; /* Add some space below each input field */
+    border-radius: 5px; /* Add rounded corners */
+    border: 1px solid #ccc; /* Add a border */
 }
 
+/* Style for the "Change Username" and "Update Password" buttons */
 .username button,
 .password button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #333; /* Set a dark background color */
+    color: #fff; /* Set a light text color */
+    border: none; /* Remove the border */
+    padding: 5px 10px; /* Add some padding */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
+/* Style for the "Friends" section */
 .friends {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Add some space below the "Friends" section */
 }
 
+/* Style for the "Friends" heading */
 .friends h2 {
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 10px; /* Add some space below the heading */
+    color: #333; /* Set a dark text color */
 }
 
+/* Style for all buttons */
 button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #333; /* Set a dark background color */
+    color: #fff; /* Set a light text color */
+    border: none; /* Remove the border */
+    padding: 8px 16px; /* Add some padding */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
+/* Change the button color on hover */
 button:hover {
-    background-color: #555;
+    background-color: #555; /* Darken the background color */
 }
 
+/* Style for the profile image */
+.profile-image {
+    width: 100%; /* Set the width to 100% */
+    height: 100%; /* Set the height to 100% */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Cover the entire container */
+    display: none; /* Hide the image by default */
+}
