@@ -1,122 +1,65 @@
-/* Reset default styles and set the font family */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Set a light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Comic Sans MS', cursive; /* Fun font */
 }
 
-/* Style for the profile container */
-.profile {
-    width: 100%; /* Set the width to 100% of the viewport */
-    max-width: 600px; /* Set a maximum width for the profile */
-    margin: 20px auto; /* Center the profile horizontally */
-    padding: 20px; /* Add some padding inside the profile */
-    background-color: #fff; /* Set a white background color */
-    border-radius: 8px; /* Add rounded corners to the profile */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
-    display: flex; /* Use flexbox layout */
-    flex-direction: column; /* Lay out children vertically */
-}
-
-/* Center-align the heading */
-h1 {
+.app-screen {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #333; /* Set a dark text color */
 }
 
-/* Style for the profile picture section */
-.profile-picture {
-    text-align: center; /* Center-align the content */
-    margin-bottom: 20px; /* Add some space below the profile picture */
+h1 {
+    color: purple;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-/* Style for the profile picture */
-.profile-picture img {
-    width: 150px; /* Set the width of the image */
-    height: 150px; /* Set the height of the image */
+.image-container {
+    width: 80px; /* Smaller image size */
+    height: 80px; /* Smaller image size */
+    margin: 0 auto 20px; /* Center the container and add space below */
+    border-radius: 50%; /* Make the container round */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Cover the container */
     border-radius: 50%; /* Make the image round */
-    border: 2px solid #333; /* Add a border around the image */
 }
 
-/* Style for the "Change Profile Picture" button */
-.profile-picture button {
-    display: block; /* Make the button a block element */
-    margin-top: 10px; /* Add some space above the button */
-    background-color: #333; /* Set a dark background color */
-    color: #fff; /* Set a light text color */
-    border: none; /* Remove the border */
-    padding: 5px 10px; /* Add some padding */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
+.loading-bar {
+    width: 100%; /* Full width */
+    height: 20px; /* Height of the loading bar */
+    background-color: #ccc; /* Background color of the loading bar */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
 }
 
-/* Style for the username and password sections */
-.username,
-.password {
-    margin-bottom: 20px; /* Add some space below each section */
+.loading-bar-inner {
+    width: 50%; /* Initial width to show as half loaded */
+    height: 100%; /* Full height */
+    background-color: #800080; /* Color for loaded portion */
+    animation: progress 2s linear infinite; /* Animation for progress */
 }
 
-/* Style for the labels in the username and password sections */
-.username label,
-.password label {
-    display: block; /* Display the labels as block elements */
-    margin-bottom: 5px; /* Add some space below each label */
-    color: #333; /* Set a dark text color */
-}
-
-/* Style for the input fields in the username and password sections */
-.username input,
-.password input {
-    width: 100%; /* Set the width of the input fields to 100% */
-    padding: 5px; /* Add some padding */
-    margin-bottom: 10px; /* Add some space below each input field */
-    border-radius: 5px; /* Add rounded corners */
-    border: 1px solid #ccc; /* Add a border */
-}
-
-/* Style for the "Change Username" and "Update Password" buttons */
-.username button,
-.password button {
-    background-color: #333; /* Set a dark background color */
-    color: #fff; /* Set a light text color */
-    border: none; /* Remove the border */
-    padding: 5px 10px; /* Add some padding */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-}
-
-/* Style for the "Friends" section */
-.friends {
-    margin-bottom: 20px; /* Add some space below the "Friends" section */
-}
-
-/* Style for the "Friends" heading */
-.friends h2 {
-    margin-bottom: 10px; /* Add some space below the heading */
-    color: #333; /* Set a dark text color */
-}
-
-/* Style for all buttons */
-button {
-    background-color: #333; /* Set a dark background color */
-    color: #fff; /* Set a light text color */
-    border: none; /* Remove the border */
-    padding: 8px 16px; /* Add some padding */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-}
-
-/* Change the button color on hover */
-button:hover {
-    background-color: #555; /* Darken the background color */
-}
-
-/* Style for the profile image */
-.profile-image {
-    width: 100%; /* Set the width to 100% */
-    height: 100%; /* Set the height to 100% */
-    border-radius: 50%; /* Make it a circle */
-    object-fit: cover; /* Cover the entire container */
-    display: none; /* Hide the image by default */
+@keyframes progress {
+    0% { width: 0; } /* Start with 0% width */
+    100% { width: 100%; } /* End with 100% width */
 }
