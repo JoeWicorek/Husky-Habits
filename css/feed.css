@@ -1,0 +1,102 @@
+/* Base styles: Mobile-first approach */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.feed-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.habit-card {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px); /* Subtract padding */
+}
+
+.habit-avatar img {
+    width: 40px; /* Smaller for mobile */
+    height: 40px;
+    border-radius: 50%;
+}
+
+.habit-info {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push status to the right */
+}
+
+.habit-status .status-icon {
+    color: green;
+    font-size: 24px;
+}
+
+.navigation-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar li {
+    display: inline;
+}
+
+.navigation-bar a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design: Media queries for desktop */
+@media (min-width: 768px) {
+    .feed-screen {
+        align-items: flex-start; /* Align to the start on larger screens */
+    }
+
+    .habit-card {
+        flex-direction: row; /* Side-by-side for larger screens */
+        width: 80%; /* Wider cards for larger screens */
+        max-width: 700px; /* Max width for readability */
+    }
+
+    .habit-avatar img {
+        width: 60px; /* Larger for desktop */
+        height: 60px;
+    }
+
+    header h1 {
+        margin-top: 30px;
+        font-size: 2em; /* Larger heading on desktop */
+    }
+    
+    .navigation-bar ul {
+        justify-content: flex-start; /* Align nav items to the start */
+    }
+
+    .navigation-bar li {
+        margin-right: 20px; /* Spacing between nav items */
+    }
+}
