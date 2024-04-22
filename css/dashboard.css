@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.top-dock > div {
+    width: 100%;
+    display: flex;
+    
+    flex-direction: column;
+}
+
+#top-dock-overall-streak {
+    width: 100%;
+}
+
+#top-dock-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 500;
+}
+
+#top-dock-overall-streak > div {
+    text-align: center;
+}
+
+#streak-number-label {
+    font-size: 3rem;
+    font-family: "Anek Gujarati", sans-serif;
+    font-style: italic;
+    color: #333333;
+    
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+
+#top-dock-overall-streak * {
+    margin: 0;
+}
+
+#top-dock-overall-streak > h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 300;
+}
+
