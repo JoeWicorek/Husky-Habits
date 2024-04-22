@@ -6,16 +6,16 @@
     <title>Feed Screen</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/feed.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Anek+Gujarati:wdth,wght@75..125,100..800&family=Assistant:wght@200..800&family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="top-dock">
+        <a href="dashboard.html" class="nav-link left"></a>
+        <h1 class="nav-title">Your Friends Habits</h1>
+        <a href="dashboard.html" class="nav-link right"></a>
+    </nav>
     <div class="feed-screen">
-        <header>
-            <h1>Your friends habits</h1>
-        </header>
-        
         <!-- Habit Card 1 -->
         <div class="habit-card">
             <div class="habit-info">
@@ -41,15 +41,14 @@
                 <span class="status-icon">&#10003;</span>
             </div>
         </div>
-        
-        <!-- Navigation Bar -->
-        <nav class="navigation-bar">
-            <ul>
-                <li><a href="/dashboard.html"><img src="img/feed-icon.png" alt="Dashboard"></a></li>
-                <li><a href="/create-task.html"><img src="img/add-icon.png" alt="Add Habit"></a></li>
-                <li><a href="/profile.html"><img src="img/profile-icon.png" alt="Profile"></a></li>
-            </ul>
-        </nav>
     </div>
+    <!-- Navigation Bar -->
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="/dashboard.html"><img src="img/feed-icon.png" alt="Dashboard"></a></li>
+            <li><a href="/create-task.html"><img src="img/add-icon.png" alt="Add Habit"></a></li>
+            <li><a href="/profile.html"><img src="img/profile-icon.png" alt="Profile"></a></li>
+        </ul>
+    </nav>
 </body>
 </html>

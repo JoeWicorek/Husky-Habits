@@ -6,7 +6,13 @@ html, body {
     height: 100%;
     font-weight: 300;
     margin: 0;
+    padding: 0;
     font-family: "Assistant", sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -63,4 +69,496 @@ h1, h2, h3 {
 
 .top-dock-vertical-container > h2 {
     text-align: center;
+}
+
+
+/* Bottom Navigation Bar */
+.navigation-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar li {
+    display: inline;
+}
+
+.navigation-bar a img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+/* Loading Screen CSS */
+
+#loading-screen {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%; /* Adjust width to match the parent's max width setting */
+    height: 100%;
+    padding: 5vw;
+    background-color: #fff;
+    text-align: center;
+    flex: 1; /* Allows the screen to grow and fill available space */
+
+    animation: fade-after-load 3s linear;
+}
+
+#loading-screen > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image-container {
+    max-width: 40vw;
+    max-height: 40vh;
+    margin: 0 auto 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.loading-bar {
+    width: 60%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.loading-bar-inner {
+    width: 100%; /* Change this value to simulate loading progress */
+    height: 100%;
+    background-color: #800080; /* Color for loaded portion */
+    animation: progress 2s linear;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fade-after-load {
+    0% { opacity: 0%; }
+    25% { opacity: 100%; }
+    50% { opacity: 100%; }
+    75% { opacity: 100%; }
+    100% { opacity: 0%; }
+}
+
+
+
+
+
+
+/* Dashboard CSS */
+#streak-number-label {
+    font-size: 3rem;
+    font-family: "Bangers", sans-serif;
+    font-style: italic;
+    color: #333333;
+    
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+/* Habit Board - main area */
+#habit-board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+
+    /* max-width: 992px; */
+}
+
+
+
+
+
+/* Create/Edit Task CSS */
+.nav-link, .image-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-title {
+    color: #343a40;
+    margin: 0;
+    font-size: 30;
+    font-weight: 500;
+}
+
+.task-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    border: 3px solid #575757;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.image-upload-container {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle-image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0.25rem;
+}
+
+.task-name-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    width: 80%;
+    height: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #717171;
+}
+
+.select-time, .add-notes, .share-with, .task-name-display {
+    font-size: 15px;
+}
+
+.select-day {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.select-day img {
+    width: 35px;
+    height: auto;
+    margin: 0.5rem 0.5rem;
+}
+
+.select-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.time-title, .time-type, .time-box {
+    margin: 0 1rem;
+}
+
+.time-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.at, .before {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 5rem;
+}
+
+.at {
+    background-color: #757575;
+    color: white;
+    margin-bottom: 0.5rem;
+
+}
+
+.before {
+    background-color: #d9d9d9;
+}
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+.time-highlight {
+    display: flex;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+
+.time-highlight p {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.add-notes {
+    display: flex;
+    align-items: baseline;
+    background-color: #efefef;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 0.5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.share-with {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.coll-display {
+    margin-left: 2rem;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    padding: 0.25rem 3rem;
+    color: #717171;
+}
+
+@media (min-width: 598px) {
+    .select-day img {
+        width: 50px;
+        height: auto;
+        margin: 0.75rem 0.75rem;
+    }
+
+    .select-time, .add-notes, .share-with, .task-name-display, .nav-link, .image-link {
+        font-size: 20px;
+    }
+
+    .nav-title {
+        font-size: 35px;
+    }
+
+    .task-section, .add-notes {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .select-day img {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .task-section, .add-notes {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .task-section, .add-notes {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+
+
+
+/* Feed + Some Dashboard CSS */
+.feed-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.habit-card {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px); /* Subtract padding */
+}
+
+.habit-avatar img {
+    width: 40px; /* Smaller for mobile */
+    height: 40px;
+    border-radius: 50%;
+}
+
+.habit-info {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push status to the right */
+}
+
+.habit-status .status-icon {
+    color: green;
+    font-size: 24px;
+}
+
+/* Responsive Design: Media queries for desktop */
+@media (min-width: 768px) {
+    .feed-screen {
+        align-items: flex-start; /* Align to the start on larger screens */
+    }
+
+    .habit-card {
+        flex-direction: row; /* Side-by-side for larger screens */
+        width: 80%; /* Wider cards for larger screens */
+        max-width: 700px; /* Max width for readability */
+    }
+
+    .habit-avatar img {
+        width: 60px; /* Larger for desktop */
+        height: 60px;
+    }
+
+    header h1 {
+        margin-top: 30px;
+        font-size: 2em; /* Larger heading on desktop */
+    }
+}
+
+
+
+/* Add Friends CSS */
+.circle-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: space-between; /* Distributes space between items on larger screens */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 0;
+    color: #555;
+}
+
+.addfriend-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #CCE8E9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addfriend-button:hover {
+    background-color: #03363d; 
+}
+
+.search-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #f2f2f2; 
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #CCE8E9; 
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+.search-form button:hover {
+    background-color: #e0e0e0; 
+}
+
+.search-form button i.fa {
+    color: #041F20;
 }
