@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-weight: 300;
+    margin: 0;
+    font-family: "Assistant", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Anek Gujarati", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+.app-title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 500;
+}
+
+.top-dock {
+    min-width: 300px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+

@@ -1,49 +1,53 @@
-* {
-    box-sizing: border-box;
-}
+/* Adjust default top dock for dashboard purposes */
 
 .top-dock > div {
     width: 100%;
+
     display: flex;
-    
     flex-direction: column;
 }
 
+
+/* Adjust streak feature in top dock */
 #top-dock-overall-streak {
     width: 100%;
-}
-
-#top-dock-title {
-    text-align: center;
-    font-size: 2rem;
-    margin: 0;
-    font-family: 'Alumni Sans', sans-serif;
-    font-weight: 500;
-}
-
-#top-dock-overall-streak > div {
-    text-align: center;
-}
-
-#streak-number-label {
-    font-size: 3rem;
-    font-family: "Anek Gujarati", sans-serif;
-    font-style: italic;
-    color: #333333;
-    
-    position: absolute;
-    top: 15%;
-    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #top-dock-overall-streak * {
     margin: 0;
 }
 
-#top-dock-overall-streak > h2 {
+#top-dock-overall-streak > div {
     text-align: center;
-    font-size: 2rem;
-    font-family: 'Alumni Sans', sans-serif;
-    font-weight: 300;
+    position: relative; 
 }
 
+#streak-number-label {
+    font-size: 3rem;
+    font-family: "Bangers", sans-serif;
+    font-style: italic;
+    color: #333333;
+    
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+#top-dock-overall-streak > h2 {
+    text-align: center;
+}
+
+
+/* Habit Board - main area */
+#habit-board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+
+    /* max-width: 992px; */
+}

@@ -13,16 +13,6 @@ p {
     font-family: 'Assistant', sans-serif;
 }
 
-.top-dock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d9d9d9;
-    padding: 1.5rem 2.5rem;
-    border-radius: 0 0 20px 20px;
-    width: 100%;
-}
-
 .nav-link, .image-link {
     color: #007bff;
     text-decoration: none;

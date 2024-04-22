@@ -1,47 +1,32 @@
-body {
-    height: 100%; /* Ensure the full height of the viewport is used */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f8f8;
-    font-family: Arial, sans-serif;
-}
-
-.page-container {
+#loading-screen {
+    opacity: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 400px; /* Keeps original width from .app-screen */
-    min-height: 100vh;
-}
 
-.app-screen {
     width: 100%; /* Adjust width to match the parent's max width setting */
-    padding: 20px;
+    height: 100%;
+    padding: 5vw;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     flex: 1; /* Allows the screen to grow and fill available space */
+
+    animation: fade-after-load 3s linear;
 }
 
-h1 {
-    color: #800080;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+#loading-screen > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .image-container {
-    width: 120px;
-    height: 120px;
+    max-width: 40vw;
+    max-height: 40vh;
     margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
@@ -52,7 +37,7 @@ h1 {
 }
 
 .loading-bar {
-    width: 100%;
+    width: 60%;
     height: 8px;
     background-color: #f0f0f0;
     border-radius: 5px;
@@ -61,10 +46,10 @@ h1 {
 }
 
 .loading-bar-inner {
-    width: 50%; /* Change this value to simulate loading progress */
+    width: 100%; /* Change this value to simulate loading progress */
     height: 100%;
     background-color: #800080; /* Color for loaded portion */
-    animation: progress 2s linear infinite;
+    animation: progress 2s linear;
 }
 
 @keyframes progress {
@@ -72,22 +57,12 @@ h1 {
     100% { width: 100%; }
 }
 
-@media (min-width: 600px) {
-    .app-screen {
-        width: 80%;
-    }
-}
-
-@media (min-width: 768px) {
-    .app-screen {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .app-screen {
-        width: 60%;
-    }
+@keyframes fade-after-load {
+    0% { opacity: 0%; }
+    25% { opacity: 100%; }
+    50% { opacity: 100%; }
+    75% { opacity: 100%; }
+    100% { opacity: 0%; }
 }
 
 footer {
