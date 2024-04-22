@@ -24,6 +24,7 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
+/* Top Dock Styling */
 .top-dock {
     min-width: 300px;
 
@@ -36,3 +37,30 @@ h1, h2, h3 {
     width: 100%;
 }
 
+.top-dock.thick > div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top dock Vertical Container */
+.top-dock-vertical-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-dock-vertical-container * {
+    margin: 0;
+}
+
+.top-dock-vertical-container > div {
+    text-align: center;
+    position: relative; 
+}
+
+.top-dock-vertical-container > h2 {
+    text-align: center;
+}

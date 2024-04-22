@@ -1,14 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: 'Comic Sans MS', cursive; /* Fun font */
-}
-
 .app-screen {
     width: 90%;
     max-width: 400px;
@@ -17,12 +6,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-h1 {
-    color: purple;
-    font-size: 48px;
-    margin-bottom: 20px;
 }
 
 .image-container {
@@ -42,24 +25,4 @@ h1 {
     height: 100%; /* Make the image fill the container */
     object-fit: cover; /* Cover the container */
     border-radius: 50%; /* Make the image round */
-}
-
-.loading-bar {
-    width: 100%; /* Full width */
-    height: 20px; /* Height of the loading bar */
-    background-color: #ccc; /* Background color of the loading bar */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.loading-bar-inner {
-    width: 50%; /* Initial width to show as half loaded */
-    height: 100%; /* Full height */
-    background-color: #800080; /* Color for loaded portion */
-    animation: progress 2s linear infinite; /* Animation for progress */
-}
-
-@keyframes progress {
-    0% { width: 0; } /* Start with 0% width */
-    100% { width: 100%; } /* End with 100% width */
 }

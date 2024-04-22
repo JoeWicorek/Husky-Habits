@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Anek+Gujarati:wdth,wght@75..125,100..800&family=Assistant:wght@200..800&family=Bangers&display=swap" rel="stylesheet">
@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
+    <section class="top-dock thick">
+        <div>
+            <h1 class="app-title">@username</h1>
+            <div class="top-dock-vertical-container">
+                <div>
+                    <img src="img/profile.jpeg" alt="Profile Picture">
+                </div>
+                <a href="#"><h2>Change Image</h2></a>
+            </div>
+        </div>
+    </section>
+
     <div class="profile">
         <h1>User Profile</h1>
         <!-- Profile Picture -->
@@ -38,7 +50,7 @@
             <!-- List of friends -->
         </div>
         <!-- Add Friends Button -->
-        <button>Add Friends</button>
+        <a href="add-friend.html"><button>Add Friends</button></a>
         <!-- Delete Account Button -->
         <button>Delete Account</button>
     </div>
