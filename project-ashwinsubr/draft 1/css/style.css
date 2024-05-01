@@ -562,3 +562,22 @@ h1, h2, h3 {
 .search-form button i.fa {
     color: #041F20;
 }
+
+
+
+
+
+.habit-card {
+    position: relative;
+}
+
+.edit-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.edit-button > a > img {
+    width: 20px;
+    height: auto;
+}
