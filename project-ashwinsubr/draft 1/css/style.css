@@ -100,35 +100,6 @@ h1, h2, h3 {
 }
 
 
-
-
-/* Loading Screen CSS */
-
-#loading-screen {
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%; /* Adjust width to match the parent's max width setting */
-    height: 100%;
-    padding: 5vw;
-    background-color: #fff;
-    text-align: center;
-    flex: 1; /* Allows the screen to grow and fill available space */
-
-    animation: fade-after-load 3s linear;
-}
-
-#loading-screen > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .image-container {
     max-width: 40vw;
     max-height: 40vh;
@@ -177,7 +148,7 @@ h1, h2, h3 {
 
 
 /* Dashboard CSS */
-#streak-number-label {
+.streak-number-label {
     font-size: 3rem;
     font-family: "Bangers", sans-serif;
     font-style: italic;
@@ -189,7 +160,7 @@ h1, h2, h3 {
 }
 
 /* Habit Board - main area */
-#habit-board {
+.habit-board {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -365,49 +336,6 @@ h1, h2, h3 {
     color: #717171;
 }
 
-@media (min-width: 598px) {
-    .select-day img {
-        width: 50px;
-        height: auto;
-        margin: 0.75rem 0.75rem;
-    }
-
-    .select-time, .add-notes, .share-with, .task-name-display, .nav-link, .image-link {
-        font-size: 20px;
-    }
-
-    .nav-title {
-        font-size: 35px;
-    }
-
-    .task-section, .add-notes {
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .select-day img {
-        margin: 1rem 1rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .task-section, .add-notes {
-        margin-left: 7rem;
-        margin-right: 7rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .task-section, .add-notes {
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-}
-
-
-
 /* Feed + Some Dashboard CSS */
 .feed-screen {
     display: flex;
@@ -442,30 +370,6 @@ h1, h2, h3 {
     color: green;
     font-size: 24px;
 }
-
-/* Responsive Design: Media queries for desktop */
-@media (min-width: 768px) {
-    .feed-screen {
-        align-items: flex-start; /* Align to the start on larger screens */
-    }
-
-    .habit-card {
-        flex-direction: row; /* Side-by-side for larger screens */
-        width: 80%; /* Wider cards for larger screens */
-        max-width: 700px; /* Max width for readability */
-    }
-
-    .habit-avatar img {
-        width: 60px; /* Larger for desktop */
-        height: 60px;
-    }
-
-    header h1 {
-        margin-top: 30px;
-        font-size: 2em; /* Larger heading on desktop */
-    }
-}
-
 
 
 /* Add Friends CSS */
@@ -580,4 +484,65 @@ h1, h2, h3 {
 .edit-button > a > img {
     width: 20px;
     height: auto;
+}
+
+/* Responsive Design: Media queries for desktop */
+@media (min-width: 768px) {
+    .feed-screen {
+        align-items: flex-start; /* Align to the start on larger screens */
+    }
+
+    .habit-card {
+        flex-direction: row; /* Side-by-side for larger screens */
+        width: 80%; /* Wider cards for larger screens */
+        max-width: 700px; /* Max width for readability */
+    }
+
+    .habit-avatar img {
+        width: 60px; /* Larger for desktop */
+        height: 60px;
+    }
+
+    header h1 {
+        margin-top: 30px;
+        font-size: 2em; /* Larger heading on desktop */
+    }
+
+    .select-day img {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (max-width: 597px) {
+    body {
+        font-size: 14px; /* Smaller font size */
+    }
+    
+    .navigation-bar a img {
+        width: 20px; /* Smaller icons in the navigation bar */
+        height: 20px;
+    }
+
+    .app-title {
+        font-size: 2.5rem; /* Smaller app title */
+    }
+
+    .top-dock {
+        padding: 1rem 1.5rem; /* Smaller padding */
+        border-radius: 0 0 10px 10px; /* Smaller border radius */
+    }
+}
+
+@media (min-width: 992px) {
+    .task-section, .add-notes {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .task-section, .add-notes {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
 }
