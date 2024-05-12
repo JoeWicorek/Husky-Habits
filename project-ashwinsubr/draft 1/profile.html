@@ -8,70 +8,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Anek+Gujarati:wdth,wght@75..125,100..800&family=Assistant:wght@200..800&family=Bangers&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Husky Habits</h1>
-    </header>
 
-    <section class="top-dock thick">
-        <div>
-            <h1 class="app-title">@username</h1>
-            <div class="top-dock-vertical-container">
-                <div>
-                    <img src="img/profile.jpeg" alt="Profile Picture">
-                </div>
-                <a href="#"><h2>Change Image</h2></a>
+    <!-- Profile Dock-->
+    <div class="profile-dock">
+        <h1 class="app-title">@username</h1>
+        <div class="profile-picture">
+            <div class="image">
+                <img src="img/profile.jpeg" alt="Profile Picture">
+            </div>
+            <div class="upload-image">
+                <input type="file" id="pfp" name="pfp" accept="image/png, image/jpeg" style="display: none;">
+                <label for="pfp" id="change-image">Change Image</label>
             </div>
         </div>
-    </section>
+        <div class="friends-tasks">
+            <div class="friends">
+                <p>8</p>
+                <button>friends</button>
+            </div>
+            <div class="tasks">
+                <p>20</p>
+                <button>tasks</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Change password/bio -->
+    <div class="update-settings">
+        <form>
+            <div class="password-details">
+                <div class="password-rules">
+                    <h2>Change Password</h2>
+                    <p>your password must be at least 6 characters and should include at least one special character (!@#$%) and number.</p>
+                </div>
+    
+                <div class="current-password">
+                    <input type="password" id="current-password" name="current-password" placeholder="Current password">
+                </div>
+    
+                <div class="new-password">
+                    <input type="password" id="current-password" name="current-password" placeholder="New password">
+                </div>
+    
+                <div class="confirm-password">
+                    <input type="password" id="current-password" name="current-password" placeholder="Re-type new password">
+                </div>
+            </div>
 
-    <div class="profile">
-        <h1>User Profile</h1>
-        <!-- Profile Picture -->
-        <div class="profile-picture">
-            <img src="profile.jpeg" alt="Profile Picture" class="profile-picture">
-            <button class="change-profile-button">Change Profile Picture</button>
+            <div class="bio-details">
+                <div class="bio-rules">
+                    <h2>Update bio</h2>
+                </div>
+                <div class="change-bio">
+                    <textarea id="bio" name="bio" placeholder="add a bio here"></textarea>
+                </div>
+            </div>
+    
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <!-- Rerouting Buttons -->
+    <div class="view-buttons">
+        <div class="add-manage-friends">
+            <a href="add-friend.html">
+                <button>Add/Manage Friends</button>
+            </a>
         </div>
-        <!-- Username -->
-        <div class="username">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="username">
-            <button>Change Username</button>
+    
+        <div class="view-tasks">
+            <button>View All Tasks</button>
         </div>
-        <!-- Password -->
-        <div class="password">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password">
-            <button>Update Password</button>
-        </div>
-        <!-- Friends List -->
-        <div class="friends">
-            <h2>Friends</h2>
-            <!-- List of friends -->
-        </div>
-        <!-- Add Friends Button -->
-        <a href="add-friend.html"><button>Add Friends</button></a>
-        <!-- Delete Account Button -->
+    </div>
+
+    <!-- Delete Account Button-->
+    <div class="delete-account">
         <button>Delete Account</button>
     </div>
 
     <!-- Navigation Bar -->
     <nav class="navigation-bar">
         <ul>
-            <li><a href="index.html"><img src="img/feed-icon.png" alt="Dashboard"></a></li>
+            <li><a href="dashboard.html"><img src="img/feed-icon.png" alt="Dashboard"></a></li>
             <li><a href="create-task.html"><img src="img/add-icon.png" alt="Add Habit"></a></li>
             <li><a href="profile.html"><img src="img/profile-icon.png" alt="Profile"></a></li>
         </ul>
     </nav>
+   
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
 
