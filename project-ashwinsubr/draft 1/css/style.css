@@ -642,6 +642,7 @@ header {
 .bottom-half {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 .update-settings {
@@ -717,11 +718,11 @@ header {
 .view-buttons {
     display: flex;
     align-items: center;
-    padding: 3rem 3rem;
     justify-content: center;
-    background-color: #E8E5DA;
+    padding: 3rem 3rem;
     margin: 1rem; 
     border-radius: 20px;
+    background-color: #E8E5DA;
 }
 
 .view-buttons button {
@@ -769,6 +770,7 @@ header {
     .view-buttons button {
         padding: 2rem 3rem;
         font-size: 1.1rem;
+        flex-grow: 1;;
     }
 
     .view-buttons, .delete-account {
