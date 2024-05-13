@@ -614,19 +614,22 @@ header {
     justify-content: center;
 }
 
-.view-buttons button, #submit, .delete-account button {
-    font-weight: 500;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    border: #fff;
+.view-buttons button, #submit, .delete-account button, .view-buttons a {
+    display: flex;
     font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    border-width: 0;
     background-color: #304c89;
     color: rgb(200, 200, 200);
     padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-align: center;
 
 }
 
-.view-buttons button:hover, #submit:hover {
+.view-buttons button:hover, #submit:hover, .view-buttons a:hover {
     background-color: #1d2d4f; 
 }
 
@@ -725,8 +728,8 @@ header {
     background-color: #E8E5DA;
 }
 
-.view-buttons button {
-    padding: 1rem 2rem;
+.view-buttons button, .view-buttons a {
+    padding: 2rem 2rem;
 }
 
 .add-manage-friends {
