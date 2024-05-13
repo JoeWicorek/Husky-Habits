@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
 }
@@ -30,6 +32,48 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
+/* Top Dock Styling */
+.top-dock {
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.top-dock.thick > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+/* Top dock Vertical Container */
+.top-dock-vertical-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-dock-vertical-container * {
+    margin: 0;
+}
+
+.top-dock-vertical-container > div {
+    text-align: center;
+    position: relative; 
+}
+
+.top-dock-vertical-container > h2 {
+    text-align: center;
+}
 
 /* Bottom Navigation Bar */
 .navigation-bar {
@@ -154,7 +198,6 @@ h1, h2, h3 {
     text-align: center;
     margin-bottom: 0.5rem;
     color: #007bff;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,8 +539,13 @@ h1, h2, h3 {
 }
 
 /* Profile CSS */
+
 .profile-dock {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
+    background-color: #648de5;
+    margin: 1rem; 
+    border-radius: 20px;
+    justify-content: center;
 }
 
 .profile-picture {
@@ -512,8 +560,8 @@ h1, h2, h3 {
     border-radius: 75%;
 }
 
-.upload-image p {
-    margin-top: 0.5rem;
+.upload-image label {
+    font-weight: 500;
 }
 
 #change-image {
@@ -543,13 +591,15 @@ h1, h2, h3 {
     margin: 0 2rem;
     font-size: 0.75rem;
     font-weight: 300;
-    background-color: white;
+    background-color: #648de5;
     box-shadow: none;
     padding: 0;
+    color: black;
+    border: none;
 }
 
 .friends button:hover, .tasks button:hover {
-    background-color: #fff;
+    background-color: #648de5;
 }
 
 .friends p, .tasks p {
@@ -561,26 +611,44 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
-button {
+.view-buttons button, #submit, .delete-account button {
     font-weight: 500;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     border: #fff;
     font-weight: 600;
     border-radius: 10px;
-    background-color: #A3C4BC;
-    color: #2b2b2b;
+    background-color: #304c89;
+    color: rgb(200, 200, 200);
     padding: 0.5rem 1rem;
 
 }
 
-button:hover {
-    background-color: #79928c; 
+.view-buttons button:hover, #submit:hover {
+    background-color: #1d2d4f; 
+}
+
+.delete-account button:hover {
+    background-color: #9e5756;
+}
+
+.top-half {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-half {
+    display: flex;
+    flex-direction: column;
 }
 
 .update-settings {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
+    background-color: #9EB7E5;
+    margin: 1rem;
+    border-radius: 20px;
 }
 
 .update-settings input {
@@ -601,22 +669,27 @@ button:hover {
     align-self: flex-end;
 }
 
+.password-details input::placeholder, .bio-details textarea::placeholder {
+    color: rgb(175, 175, 175);
+}
+
 .current-password input, .new-password input, .confirm-password input {
     width: 100%;
 }
 
-input[type="text"], input[type="password"], textarea {
-    background-color: #bfd7b5;
+.password-details input[type="text"], .password-details input[type="password"], .bio-details textarea {
+    background-color: #576580;
     border-color: #5a5f61;
     border-radius: 10px;
     border-width: 1px;
+    color: white;
 }
 
 .password-rules h2, .bio-rules h2 {
     padding: 0;
     margin: 0;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .password-rules p {
@@ -632,12 +705,23 @@ input[type="text"], input[type="password"], textarea {
     padding-bottom: 1rem;
 }
 
-.view-buttons, .delete-account {
+.delete-account {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 4rem 3rem;
     justify-content: center;
+    padding: 0rem 2rem;
+    margin: 1rem;
+}
+
+.view-buttons {
+    display: flex;
+    align-items: center;
+    padding: 3rem 3rem;
+    justify-content: center;
+    background-color: #E8E5DA;
+    margin: 1rem; 
+    border-radius: 20px;
 }
 
 .view-buttons button {
@@ -655,42 +739,48 @@ input[type="text"], input[type="password"], textarea {
 }
 
 @media (min-width: 768px) {
-    .profile-dock {
-        background-color: #E8E5DA;
-        padding: 20px;
-        margin: 20px; 
-        border-radius: 20px;
+    .friends button, .tasks button {
+        font-size: 1rem;
+    }
+
+    .friends p, .tasks p {
+        font-size: 2rem;
+        font-weight: 500;
     }
 
     .image img {
         height: 200px;
         width: 200px;
     }
-    
-    .update-settings {
-        background-color: #9EB7E5;
-        padding: 20px;
-        margin: 20px; 
-        border-radius: 20px;
+
+    #change-image {
+        font-size: 1.2rem;
     }
 
-    .view-buttons {
-        background-color: #648de5;
-        padding: 20px;
-        margin: 20px; 
-        border-radius: 20px;
+    .password-rules h2, .bio-rules h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
     }
 
-    .delete-account {
-        background-color: #304C89;
-        padding: 20px;
-        margin: 20px; 
-        border-radius: 20px; 
+    .password-rules p {
+        font-size: 1rem;
     }
 
-    .profile-dock, .update-settings {
-        width: calc(50% - 50px);
-        display: inline-block;
-        vertical-align: top;
+    .view-buttons button {
+        padding: 2rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .view-buttons, .delete-account {
+        font-size: 2rem;
+    }
+
+    .top-half, .bottom-half{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile-dock, .update-settings, .view-buttons, .delete-account {
+        width: calc(50% - 1rem);
     }
 }
