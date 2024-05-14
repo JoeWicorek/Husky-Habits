@@ -77,32 +77,77 @@ header {
 
 /* Bottom Navigation Bar */
 .navigation-bar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    background-color: #f0f0f0;
     padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navigation-bar ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: center;
     padding: 0;
-    color: palevioletred;
 }
 
 .navigation-bar li {
-    display: inline;
+    margin: 0 20px;
+}
+
+.navigation-bar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black; /* Default text color */
 }
 
 .navigation-bar a img {
-    width: 24px;
     height: 24px;
+    margin-right: 10px; /* Space between icon and text */
 }
 
+.nav-label {
+    display: none; /* Hide text labels on small screens */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .nav-label {
+        display: inline; /* show text labels on larger screens */
+    }
+
+    .navigation-bar ul {
+        flex-direction: row;
+    }
+
+    .navigation-bar li {
+        margin: 10px 15px;
+    }
+}
+
+html, body {
+    height: 100%; /*so that footer stays at the bottom */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+}
 
 .image-container {
     max-width: 40vw;
