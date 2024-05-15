@@ -23,6 +23,13 @@ h1, h2, h3 {
     font-size: 1.5rem;
 }
 
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e0e0e0;
+}
+
 
 .app-title {
     text-align: center;

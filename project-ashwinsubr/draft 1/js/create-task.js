@@ -12,6 +12,13 @@ const dayColors = {
 
 let days = document.querySelectorAll(".select-day img");
 
+document.querySelector('.nav-link.right').addEventListener('submit', function() {
+  document.querySelector('form').submit();
+});
+
+
+
+
 days.forEach((img) => {
   img.addEventListener("click", function() {
     toggleDay(img);
@@ -37,3 +44,5 @@ function toggleDay(img) {
                           drop-shadow(0px 0px 6px ${dayColors[dayName]})`;
   }
 }
+
+
