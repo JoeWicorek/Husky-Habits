@@ -7,4 +7,4 @@ function App(props) {
         {/* <AboutPage /> */}
       </div>
     )
-  }
+}
