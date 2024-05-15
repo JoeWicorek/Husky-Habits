@@ -36,110 +36,89 @@
         </nav>
     </header>
 
-    <!-- Form element to wrap all content -->
-    <form class="task-form">
-        <section class="task-section">
-            <div class="image-upload-container">
-                <div class="circle-image">
-                    <img src="img/circle.png">
-                </div>
-                <a href="#" class="image-link">Upload Image</a>
-            </div>
-            <div class="task-name-display">
-                <input type="text" placeholder="Enter task name" name="taskName">
-            </div>
-        </section>
-
-        <section class="task-details">
-            <div class="select-day">
-                <!-- Monday -->
-                
-                <img src="img/mon.png" alt="Monday">
-                <input type="hidden" name="monday" value="0">
-
-                <!-- Tuesday -->
-                <input type="hidden" name="tuesday" value="0">
-                <img src="img/tue.png" alt="Tuesday">
-
-                <!-- Wednesday -->
-                <input type="hidden" name="wednesday" value="0">
-                <img src="img/wed.png" alt="Wednesday">
-
-                <!-- Thursday -->
-                <input type="hidden" name="thursday" value="0">
-                <img src="img/thur.png" alt="Thursday">
-
-                <!-- Friday -->
-                <input type="hidden" name="friday" value="0">
-                <img src="img/fri.png" alt="Friday">
-
-                <!-- Saturday -->
-                <input type="hidden" name="saturday" value="0">
-                <img src="img/sat.png" alt="Saturday">
-
-                <!-- Sunday -->
-                <input type="hidden" name="sunday" value="0">
-                <img src="img/sun.png" alt="Sunday">
-
-            </div>
-
-            <div class="select-time">
-                <div class="time-title">
-                    <p>Time:</p>
-                </div>
-                <div class="time-type">
-                    <div class="at">
-                        <p>At</p>
+    <main>
+        <!-- Form element to wrap all content -->
+        <form class="task-form">
+            <section class="task-section">
+                <div class="image-upload-container">
+                    <div class="circle-image">
+                        <img src="img/circle.png">
                     </div>
-                    <div class="before">
-                        <p>Before</p>
+                    <a href="#" class="image-link">Upload Image</a>
+                </div>
+                <div class="task-name-display">
+                    <input type="text" placeholder="Enter task name" name="taskName">
+                </div>
+            </section>
+
+            <section class="task-details">
+                <div class="select-day">
+                    <!-- Monday -->
+                    
+                    <img src="img/mon.png" alt="Monday">
+                    <input type="hidden" name="monday" value="0">
+
+                    <!-- Tuesday -->
+                    <input type="hidden" name="tuesday" value="0">
+                    <img src="img/tue.png" alt="Tuesday">
+
+                    <!-- Wednesday -->
+                    <input type="hidden" name="wednesday" value="0">
+                    <img src="img/wed.png" alt="Wednesday">
+
+                    <!-- Thursday -->
+                    <input type="hidden" name="thursday" value="0">
+                    <img src="img/thur.png" alt="Thursday">
+
+                    <!-- Friday -->
+                    <input type="hidden" name="friday" value="0">
+                    <img src="img/fri.png" alt="Friday">
+
+                    <!-- Saturday -->
+                    <input type="hidden" name="saturday" value="0">
+                    <img src="img/sat.png" alt="Saturday">
+
+                    <!-- Sunday -->
+                    <input type="hidden" name="sunday" value="0">
+                    <img src="img/sun.png" alt="Sunday">
+
+                </div>
+
+                <div class="select-time">
+                    <div class="time-title">
+                        <p>Time:</p>
+                    </div>
+                    <div class="time-type">
+                        <div class="at">
+                            <p>At</p>
+                        </div>
+                        <div class="before">
+                            <p>Before</p>
+                        </div>
+                    </div>
+                    <div class="time-box">
+                        <div class="time-highlight">
+                            <p>12</p>
+                            <p>00</p>
+                            <p>AM</p>
+                        </div>
                     </div>
                 </div>
-                <div class="time-box">
-                    <div class="time-highlight">
-                        <p>12</p>
-                        <p>00</p>
-                        <p>AM</p>
+
+                <div class="add-notes">
+                    <input type="text" placeholder="Notes" name="notes">
+                </div>
+
+                <div class="share-with">
+                    <p>Share with:</p>
+                    <div class="coll-display">
+                        <p>@username</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="add-notes">
-                <input type="text" placeholder="Notes" name="notes">
-            </div>
-
-            <div class="share-with">
-                <p>Share with:</p>
-                <div class="coll-display">
-                    <p>@username</p>
-                </div>
-            </div>
-        </section>
-    </form>
-    <!-- End of form element -->
-
-    <nav class="navigation-bar">
-        <ul>
-            <li>
-                <a href="index.html">
-                    <img src="img/feed-icon.png" alt="Dashboard">
-                    <span class="nav-label">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="create-task.html">
-                    <img src="img/add-icon.png" alt="Add Habit">
-                    <span class="nav-label">Add Habit</span>
-                </a>
-            </li>
-            <li>
-                <a href="profile.html">
-                    <img src="img/profile-icon.png" alt="Profile">
-                    <span class="nav-label">Profile</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+            </section>
+        </form>
+        <!-- End of form element -->
+    </main>
     
     <footer>
         <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>

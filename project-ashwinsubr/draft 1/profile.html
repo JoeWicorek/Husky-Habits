@@ -20,91 +20,93 @@
         </nav>
     </header>
 
-    <div class="top-half">
-        <!-- Profile Dock-->
-        <div class="profile-dock">
-            <div class="content">
-                
-            </div>
-            <h1 class="app-title">@username</h1>
+    <main>
+        <div class="top-half">
+            <!-- Profile Dock-->
+            <div class="profile-dock">
+                <div class="content">
+                    
+                </div>
+                <h1 class="app-title">@username</h1>
 
-            <div class="profile-picture">
-                <div class="image">
-                    <img src="img/profile.jpeg" alt="Profile Picture">
-                </div>
-                <div class="upload-image">
-                    <input type="file" id="pfp" name="pfp" accept="image/png, image/jpeg" style="display: none;">
-                    <label for="pfp" id="change-image">Change Image</label>
-                </div>
-            </div>
-
-            <div class="friends-tasks">
-                <div class="friends">
-                    <p>8</p>
-                    <button>friends</button>
-                </div>
-                <div class="tasks">
-                    <p>20</p>
-                    <button>tasks</button>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Change password/bio -->
-        <div class="update-settings">
-            <form>
-                <div class="password-details">
-                    <div class="password-rules">
-                        <h2>Change Password</h2>
-                        <p>your password must be at least 6 characters and should include at least one special character (!@#$%) and number.</p>
+                <div class="profile-picture">
+                    <div class="image">
+                        <img src="img/profile.jpeg" alt="Profile Picture">
                     </div>
-        
-                    <div class="current-password">
-                        <input type="password" id="current-password" name="current-password" placeholder="Current password">
-                    </div>
-        
-                    <div class="new-password">
-                        <input type="password" id="current-password" name="current-password" placeholder="New password">
-                    </div>
-        
-                    <div class="confirm-password">
-                        <input type="password" id="current-password" name="current-password" placeholder="Re-type new password">
+                    <div class="upload-image">
+                        <input type="file" id="pfp" name="pfp" accept="image/png, image/jpeg" style="display: none;">
+                        <label for="pfp" id="change-image">Change Image</label>
                     </div>
                 </div>
 
-                <div class="bio-details">
-                    <div class="bio-rules">
-                        <h2>Update bio</h2>
+                <div class="friends-tasks">
+                    <div class="friends">
+                        <p>8</p>
+                        <button>friends</button>
                     </div>
-                    <div class="change-bio">
-                        <textarea id="bio" name="bio" placeholder="add a bio here"></textarea>
+                    <div class="tasks">
+                        <p>20</p>
+                        <button>tasks</button>
                     </div>
                 </div>
-        
-                <button type="submit" id="submit">Save Changes</button>
-            </form>
-        </div>
-        
-    </div>
 
-    <div class="bottom-half">
-        <!-- Rerouting Buttons -->
-        <div class="view-buttons">
-            <div class="add-manage-friends">
-                <a href="add-friend.html" class="button">Add/Manage Friends</a>
             </div>
-        
-            <div class="view-tasks">
-                <button>View All Tasks</button>
+            
+            <!-- Change password/bio -->
+            <div class="update-settings">
+                <form>
+                    <div class="password-details">
+                        <div class="password-rules">
+                            <h2>Change Password</h2>
+                            <p>your password must be at least 6 characters and should include at least one special character (!@#$%) and number.</p>
+                        </div>
+            
+                        <div class="current-password">
+                            <input type="password" id="current-password" name="current-password" placeholder="Current password">
+                        </div>
+            
+                        <div class="new-password">
+                            <input type="password" id="current-password" name="current-password" placeholder="New password">
+                        </div>
+            
+                        <div class="confirm-password">
+                            <input type="password" id="current-password" name="current-password" placeholder="Re-type new password">
+                        </div>
+                    </div>
+
+                    <div class="bio-details">
+                        <div class="bio-rules">
+                            <h2>Update bio</h2>
+                        </div>
+                        <div class="change-bio">
+                            <textarea id="bio" name="bio" placeholder="add a bio here"></textarea>
+                        </div>
+                    </div>
+            
+                    <button type="submit" id="submit">Save Changes</button>
+                </form>
             </div>
+            
         </div>
 
-        <!-- Delete Account -->
-        <div class="delete-account">
-            <button>Delete Account</button>
+        <div class="bottom-half">
+            <!-- Rerouting Buttons -->
+            <div class="view-buttons">
+                <div class="add-manage-friends">
+                    <a href="add-friend.html" class="button">Add/Manage Friends</a>
+                </div>
+            
+                <div class="view-tasks">
+                    <button>View All Tasks</button>
+                </div>
+            </div>
+
+            <!-- Delete Account -->
+            <div class="delete-account">
+                <button>Delete Account</button>
+            </div>
         </div>
-    </div>
+    </main>
 
     <nav class="navigation-bar">
         <ul>
