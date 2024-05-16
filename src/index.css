@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Anek+Gujarati:wdth,wght@75..125,100..800&family=Assistant:wght@200..800&family=Bangers&display=swap');
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-family: "Assistant", sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Anek Gujarati", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+.app-title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Top Dock Styling */
+.top-dock {
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+}
+
+.top-dock.thick > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+/* Top dock Vertical Container */
+.top-dock-vertical-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-dock-vertical-container * {
+    margin: 0;
+}
+
+.top-dock-vertical-container > div {
+    text-align: center;
+    position: relative; 
+}
+
+.top-dock-vertical-container > h2 {
+    text-align: center;
+}
+
+/* Bottom Navigation Bar */
+.navigation-bar {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-bar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black; /* Default text color */
+}
+
+.navigation-bar a img {
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.nav-label {
+    display: none; /* Hide text labels on small screens */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .nav-label {
+        display: inline; /* show text labels on larger screens */
+    }
+
+    .navigation-bar ul {
+        flex-direction: row;
+    }
+
+    .navigation-bar li {
+        margin: 10px 15px;
+    }
+}
+
+html, body {
+    height: 100%; /*so that footer stays at the bottom */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    max-width: 992px;
+    margin: auto;
+}
+
+.image-container {
+    max-width: 40vw;
+    max-height: 40vh;
+    margin: 0 auto 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.loading-bar {
+    width: 60%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.loading-bar-inner {
+    width: 100%; /* Change this value to simulate loading progress */
+    height: 100%;
+    background-color: #800080; /* Color for loaded portion */
+    animation: progress 2s linear;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fade-after-load {
+    0% { opacity: 0%; }
+    25% { opacity: 100%; }
+    50% { opacity: 100%; }
+    75% { opacity: 100%; }
+    100% { opacity: 0%; }
+}
+
+
+/* Dashboard CSS */
+.streak-number-label {
+    font-size: 3rem;
+    font-family: "Bangers", sans-serif;
+    font-style: italic;
+    color: #333333;
+    
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+/* Create/Edit Task CSS */
+.nav-link, .image-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-title {
+    color: #343a40;
+    margin: 0;
+    font-size: 30;
+    font-weight: 500;
+}
+
+.task-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    border: 3px solid #575757;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.image-upload-container {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle-image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0.25rem;
+}
+
+.task-name-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    width: 80%;
+    height: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #717171;
+}
+
+.select-time, .add-notes, .share-with, .task-name-display {
+    font-size: 15px;
+}
+
+.select-day {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.select-day img {
+    width: 35px;
+    height: auto;
+    margin: 0.5rem 0.5rem;
+}
+
+.day-selected {
+    filter:
+          drop-shadow(0px 0px 1px white)
+          drop-shadow(0px 0px 2px white)
+          drop-shadow(0px 0px 3px white)
+          drop-shadow(0px 0px 4px white)
+          drop-shadow(0px 0px 5px white)
+          drop-shadow(0px 0px 6px green);
+}
+
+.select-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.time-title, .time-type, .time-box {
+    margin: 0 1rem;
+}
+
+.time-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.at, .before {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 5rem;
+}
+
+.at {
+    background-color: #757575;
+    color: white;
+    margin-bottom: 0.5rem;
+
+}
+
+.before {
+    background-color: #d9d9d9;
+}
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+.time-highlight {
+    display: flex;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+
+.time-highlight p {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.add-notes {
+    display: flex;
+    align-items: baseline;
+    background-color: #efefef;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 0.5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.share-with {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.coll-display {
+    margin-left: 2rem;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    padding: 0.25rem 3rem;
+    color: #717171;
+}
+
+/* Feed + Some Dashboard CSS */
+.feed-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Habit Board - main area */
+.habit-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+}
+
+.habit-card {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 250px;
+}
+
+
+/* Mutual Friend Challenge CSS */
+.habit-card.mutual-challenge {
+    grid-column: span 2;
+}
+
+.habit-avatar img {
+    width: 40px; /* Smaller for mobile */
+    height: 40px;
+    border-radius: 50%;
+}
+
+.habit-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.habit-status .status-icon {
+    color: green;
+    font-size: 24px;
+}
+
+.habit-status button {
+    margin-top: 10px;
+}
+
+
+/* Add Friends CSS */
+.circle-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 0;
+    color: #555;
+}
+
+.addfriend-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #CCE8E9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addfriend-button:hover {
+    background-color: #03363d; 
+}
+
+.search-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #f2f2f2; 
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #CCE8E9; 
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+.search-form button:hover {
+    background-color: #e0e0e0; 
+}
+
+.search-form button i.fa {
+    color: #041F20;
+}
+
+
+.habit-card {
+    position: relative;
+}
+
+.edit-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.edit-button > a > img {
+    width: 20px;
+    height: auto;
+}
+
+/* Responsive Design: Media queries for desktop */
+@media (min-width: 768px) {
+    .feed-screen {
+        align-items: flex-start; /* Align to the start on larger screens */
+    }
+
+    .habit-avatar img {
+        width: 60px; /* Larger for desktop */
+        height: 60px;
+    }
+
+    header h1 {
+        margin-top: 30px;
+        font-size: 2em; /* Larger heading on desktop */
+    }
+
+    .select-day img {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (max-width: 597px) {
+    body {
+        font-size: 14px; /* Smaller font size */
+    }
+    
+    .navigation-bar a img {
+        width: 20px; /* Smaller icons in the navigation bar */
+        height: 20px;
+    }
+
+    .app-title {
+        font-size: 2.5rem; /* Smaller app title */
+    }
+
+    .top-dock {
+        padding: 1rem 1.5rem; /* Smaller padding */
+        border-radius: 0 0 10px 10px; /* Smaller border radius */
+    }
+}
+
+@media (min-width: 992px) {
+    .task-section, .add-notes {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .task-section, .add-notes {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+
+/* Profile CSS */
+
+.profile-dock {
+    padding: 1rem 3rem;
+    background-color: #648de5;
+    margin: 1rem; 
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.profile-picture {
+    text-align: center;
+}
+
+.image img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 75%;
+}
+
+.upload-image label {
+    font-weight: 500;
+}
+
+#change-image {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.friends-tasks {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.friends, .tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem; 
+    padding-bottom: 2rem;
+}
+
+.friends button, .tasks button {
+    margin: 0 2rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    background-color: #648de5;
+    box-shadow: none;
+    padding: 0;
+    color: black;
+    border: none;
+}
+
+.friends button:hover, .tasks button:hover {
+    background-color: #648de5;
+}
+
+.friends p, .tasks p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.update-settings, form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.view-buttons button, #submit, .delete-account button, .view-buttons a {
+    display: flex;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #304c89;
+    color: rgb(200, 200, 200);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.view-buttons button:hover, #submit:hover, .view-buttons a:hover {
+    background-color: #1d2d4f; 
+}
+
+.delete-account button:hover {
+    background-color: #9e5756;
+}
+
+.top-half {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-half {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.update-settings {
+    padding: 1rem 3rem;
+    background-color: #9EB7E5;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.update-settings input {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 0.5rem;
+}
+
+.change-bio textarea {
+    height: 4rem;
+    width: 100%;
+    padding: 8px; 
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+}
+
+.update-settings button {
+    display: flex;
+    align-self: flex-end;
+}
+
+.password-details input::placeholder, .bio-details textarea::placeholder {
+    color: rgb(175, 175, 175);
+}
+
+.current-password input, .new-password input, .confirm-password input {
+    width: 100%;
+}
+
+.password-details input[type="text"], .password-details input[type="password"], .bio-details textarea {
+    background-color: #576580;
+    border-color: #5a5f61;
+    border-radius: 10px;
+    border-width: 1px;
+    color: white;
+}
+
+.password-rules h2, .bio-rules h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.password-rules p {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.bio-details {
+    padding-bottom: 1rem;
+}
+
+.password-details {
+    padding-bottom: 1rem;
+}
+
+.delete-account {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: 1rem;
+}
+
+.view-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 3rem;
+    margin: 1rem; 
+    border-radius: 20px;
+    background-color: #E8E5DA;
+}
+
+.view-buttons button, .view-buttons a {
+    padding: 2rem 2rem;
+}
+
+.add-manage-friends {
+    margin-right: 2rem;
+}
+
+.delete-account button {
+    padding: 1rem 3rem;
+    background-color: rgb(230, 125, 125);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .friends button, .tasks button {
+        font-size: 1rem;
+    }
+
+    .friends p, .tasks p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .image img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #change-image {
+        font-size: 1.2rem;
+    }
+
+    .password-rules h2, .bio-rules h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .password-rules p {
+        font-size: 1rem;
+    }
+
+    .view-buttons button {
+        padding: 2rem 3rem;
+        font-size: 1.1rem;
+        flex-grow: 1;;
+    }
+
+    .view-buttons, .delete-account {
+        font-size: 2rem;
+    }
+
+    .top-half, .bottom-half{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile-dock, .update-settings, .view-buttons, .delete-account {
+        width: calc(50% - 1rem);
+    }
+}
