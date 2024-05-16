@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/add-friend.css'; // Assuming this is the path to your CSS file
-import addFriendIcon from './img/addfriend.png'; // Assuming this is the path to your addfriend.png file
-import person1Icon from './img/person1.png'; // Assuming this is the path to your person1.png file
+import './css/add-friend.css'; 
+import addFriendIcon from './img/addfriend.png'; 
+import person1Icon from './img/person1.png'; 
 
 function AddFriendScreen() {
     return (

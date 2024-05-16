@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/create-edit-task.css'; // Assuming this is the path to your CSS file
+import './css/create-edit-task.css'; 
 
 function EditTaskScreen() {
     return (
