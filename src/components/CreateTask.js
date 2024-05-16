@@ -1,13 +1,8 @@
 import React from 'react';
-import './css/create-edit-task.css'; // Assuming this is the path to your CSS file
 
-function CreateTaskScreen() {
+export function CreateTaskScreen(props) {
     return (
         <div>
-            <header>
-                <h1 className="app-title">HuskyHabits</h1>
-            </header>
-
             <nav className="top-dock">
                 <a href="index.html" className="nav-link left">Cancel</a>
                 <h1 className="nav-title">Create Task</h1>
@@ -93,12 +88,6 @@ function CreateTaskScreen() {
                     </section>
                 </form>
             </main>
-            
-            <footer>
-                <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
-            </footer>
         </div>
     );
 }
-
-export default CreateTaskScreen;

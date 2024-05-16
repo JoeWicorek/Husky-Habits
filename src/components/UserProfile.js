@@ -1,13 +1,8 @@
 import React from 'react';
-import './css/profile.css'; 
 
-function UserProfile() {
+function UserProfile(props) {
     return (
         <div>
-            <header>
-                <h1 className="app-title">HuskyHabits</h1>
-            </header>
-
             <nav className="top-dock" style={{ justifyContent: 'center' }}>
                 <h1 className="nav-title">Your Profile</h1>
             </nav>
@@ -73,33 +68,6 @@ function UserProfile() {
                     </div>
                 </div>
             </main>
-
-            <nav className="navigation-bar">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <img src="img/feed-icon.png" alt="Dashboard" />
-                            <span className="nav-label">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="create-task.html">
-                            <img src="img/add-icon.png" alt="Add Habit" />
-                            <span className="nav-label">Add Habit</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="profile.html">
-                            <img src="img/profile-icon.png" alt="Profile" />
-                            <span className="nav-label">Profile</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <footer>
-                <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
-            </footer>
         </div>
     );
 }

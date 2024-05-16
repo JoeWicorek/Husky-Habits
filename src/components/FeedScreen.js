@@ -1,13 +1,8 @@
 import React from 'react';
-import './css/feed.css'; 
 
-function FeedScreen() {
+export function FeedScreen(props) {
     return (
         <div>
-            <header>
-                <h1 className="app-title">HuskyHabits</h1>
-            </header>
-
             <nav className="top-dock">
                 <a href="index.html" className="nav-link left"></a>
                 <h1 className="nav-title">Your Friends Habits</h1>
@@ -41,35 +36,6 @@ function FeedScreen() {
                     </div>
                 </div>
             </main>
-
-            <nav className="navigation-bar">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <img src="img/feed-icon.png" alt="Dashboard" />
-                            <span className="nav-label">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="create-task.html">
-                            <img src="img/add-icon.png" alt="Add Habit" />
-                            <span className="nav-label">Add Habit</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="profile.html">
-                            <img src="img/profile-icon.png" alt="Profile" />
-                            <span className="nav-label">Profile</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <footer>
-                <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
-            </footer>
         </div>
     );
 }
-
-export default FeedScreen;

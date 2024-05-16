@@ -1,16 +1,11 @@
 import React from 'react';
-import './css/create-edit-task.css'; 
 
-function EditTaskScreen() {
+export function EditTaskScreen(props) {
     return (
         <div>
-            <header>
-                <h1 className="app-title">HuskyHabits</h1>
-            </header>
-
             <nav className="top-dock">
                 <a href="index.html" className="nav-link left">Cancel</a>
-                <h1 className="nav-title">Create Task</h1>
+                <h1 className="nav-title">Edit Task</h1>
                 <a href="index.html" className="nav-link right"> Done </a>
             </nav>
 
@@ -69,12 +64,6 @@ function EditTaskScreen() {
                     </div>
                 </div>
             </section>
-
-            <footer>
-                <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
-            </footer>
         </div>
     );
 }
-
-export default EditTaskScreen;
