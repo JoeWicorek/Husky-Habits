@@ -6,6 +6,7 @@ import { EditTaskScreen } from './components/EditTask.js'
 import { CreateTaskScreen } from './components/CreateTask.js';
 import { FeedScreen } from './components/FeedScreen.js';
 import UserProfile from './components/UserProfile.js';
+import { AddFriendScreen } from './components/AddFriend.js';
 
 import './index.css';
 
@@ -17,7 +18,8 @@ function App(props) {
       {/* <EditTaskScreen /> */}
       {/* <CreateTaskScreen /> */}
       {/* <FeedScreen /> */}
-      <UserProfile />
+      {/* <UserProfile /> */}
+      <AddFriendScreen />
       <NavBar />
       <Footer />
       {/* Other components and content */}

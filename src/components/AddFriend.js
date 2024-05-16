@@ -1,15 +1,8 @@
 import React from 'react';
-import './css/add-friend.css'; 
-import addFriendIcon from './img/addfriend.png'; 
-import person1Icon from './img/person1.png'; 
 
-function AddFriendScreen() {
+export function AddFriendScreen() {
     return (
         <div>
-            <header>
-                <h1 className="app-title">HuskyHabits</h1>
-            </header>
-
             <nav className="top-dock">
                 <a href="profile.html" className="nav-link left">Cancel</a>
                 <h1 className="nav-title">Add Friend</h1>
@@ -20,7 +13,7 @@ function AddFriendScreen() {
                 <section className="task-section">
                     <div className="image-upload-container">
                         <div className="circle-image">
-                            <img src={addFriendIcon} alt="Add Friend Icon" />
+                            <img src="img/addfriend.png" alt="Add Friend Icon" />
                         </div>
                     </div>
                     <div className="search-form">
@@ -31,7 +24,7 @@ function AddFriendScreen() {
 
                 <div className="search-results">
                     <div className="item">
-                        <img src={person1Icon} alt="Person 1" className="profile-img" />
+                        <img src="img/person1.png" alt="Person 1" className="profile-img" />
                         <div className="info">
                             <h3>Jackson McCoy</h3>
                             <p>jackson.mccoy@example.com</p>
@@ -41,24 +34,6 @@ function AddFriendScreen() {
                     {/* Add other items here */}
                 </div>
             </main>
-
-            <nav className="navigation-bar">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <img src="img/feed-icon.png" alt="Dashboard" />
-                            <span className="nav-label">Dashboard</span>
-                        </a>
-                    </li>
-                    {/* Add other navigation items here */}
-                </ul>
-            </nav>
-            
-            <footer>
-                <p>&copy; 2024 Husky Habits. All Rights Reserved.</p>
-            </footer>
         </div>
     );
 }
-
-export default AddFriendScreen;
