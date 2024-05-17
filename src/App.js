@@ -19,7 +19,7 @@ function App(props) {
       {/* <CreateTaskScreen /> */}
       {/* <FeedScreen /> */}
       {/* <UserProfile /> */}
-      <AddFriendScreen />
+      <CreateTaskScreen />
       <NavBar />
       <Footer />
       {/* Other components and content */}
