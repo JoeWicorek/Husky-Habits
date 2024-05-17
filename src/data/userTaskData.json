@@ -1,0 +1,41 @@
+{
+    "joeseph": {
+        "streak": 26,
+        "tasksLeftForToday": 1,
+        "completedTasks": [21],
+        "tasks": [
+            {
+                "taskId": 15,
+                "taskName": "Clean the house",
+                "status": "incomplete"
+            },
+            {
+                "taskId": 21,
+                "taskName": "Clean the fridge",
+                "status": "complete"
+            }
+        ]
+    },
+    "stacy": {
+        "streak": 15,
+        "tasksLeftForToday": 3,
+        "completedTasks": [],
+        "tasks": [
+            {
+                "taskId": 9,
+                "taskName": "Clean the house",
+                "status": "incomplete"
+            },
+            {
+                "taskId": 81,
+                "taskName": "Clean the fridge",
+                "status": "incomplete"
+            },
+            {
+                "taskId": 14,
+                "taskName": "Go to the gym",
+                "status": "incomplete"
+            }
+        ]
+    }
+}
