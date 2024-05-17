@@ -14,12 +14,15 @@ import './index.css';
 function App(props) {
   return (
     <div className="App">
+      <HeaderTitle />
+      <Dashboard />
+      {/* <FeedScreen /> */} 
       {/* <EditTaskScreen /> */}
       {/* <CreateTaskScreen /> */}
-      {/* <FeedScreen /> */}
       {/* <UserProfile /> */}
-      <AddFriendScreen />
-      {/* Other components and content */}
+      {/* <AddFriendScreen /> */}
+      <NavBar />
+      <Footer />
     </div>
   );
 }
