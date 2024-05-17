@@ -2,7 +2,6 @@ import React from 'react';
 
 export function TopDock(props) {
     const dockTitle = props.dockTitleName;
-    const hello = props.helloWorld;
     return (
         <div>
             <nav className="top-dock">
