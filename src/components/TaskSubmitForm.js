@@ -1,32 +1,49 @@
 import React from 'react';
-import { TopDock } from './TopDock';
 
-export function EditTaskScreen(props) {
+export function TaskSubmitForm(props) {
     return (
-        <div>
-            <TopDock dockTitleName = {"Edit Task"}/>
-            
+        <form className="task-form">
             <section className="task-section">
                 <div className="image-upload-container">
                     <div className="circle-image">
                         <img src="img/circle.png" alt="Circle" />
                     </div>
-                    <a href="#" className="image-link">Change Image</a>
+                    <a href="#" className="image-link">Upload Image</a>
                 </div>
                 <div className="task-name-display">
-                    <p>Edit task name</p>
+                    <input type="text" placeholder="Enter task name" name="taskName" />
                 </div>
             </section>
 
             <section className="task-details">
                 <div className="select-day">
-                    <img src="img/sun.png" alt="Sunday" />
+                    {/* Monday */}
                     <img src="img/mon.png" alt="Monday" />
+                    <input type="hidden" name="monday" value="0" />
+
+                    {/* Tuesday */}
+                    <input type="hidden" name="tuesday" value="0" />
                     <img src="img/tue.png" alt="Tuesday" />
+
+                    {/* Wednesday */}
+                    <input type="hidden" name="wednesday" value="0" />
                     <img src="img/wed.png" alt="Wednesday" />
+
+                    {/* Thursday */}
+                    <input type="hidden" name="thursday" value="0" />
                     <img src="img/thur.png" alt="Thursday" />
+
+                    {/* Friday */}
+                    <input type="hidden" name="friday" value="0" />
                     <img src="img/fri.png" alt="Friday" />
+
+                    {/* Saturday */}
+                    <input type="hidden" name="saturday" value="0" />
                     <img src="img/sat.png" alt="Saturday" />
+
+                    {/* Sunday */}
+                    <input type="hidden" name="sunday" value="0" />
+                    <img src="img/sun.png" alt="Sunday" />
                 </div>
 
                 <div className="select-time">
@@ -51,7 +68,7 @@ export function EditTaskScreen(props) {
                 </div>
 
                 <div className="add-notes">
-                    <p>Update Notes:</p>
+                    <input type="text" placeholder="Notes" name="notes" />
                 </div>
 
                 <div className="share-with">
@@ -61,6 +78,6 @@ export function EditTaskScreen(props) {
                     </div>
                 </div>
             </section>
-        </div>
-    );
+        </form>
+    )
 }
