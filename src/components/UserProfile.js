@@ -1,12 +1,18 @@
-import React from 'react';
 
-function ProfileHeader() {
+import React from 'react';
+import TopDock from './TopDock';
+
+export function UserProfile(props) {
     return (
-        <nav className="top-dock" style={{ justifyContent: 'center' }}>
-            <h1 className="nav-title">Your Profile</h1>
-        </nav>
+        <div>
+            <TopDock dockTitleName = {"Create Task"}/>
+            <main>
+                <TaskSubmitForm />
+            </main>
+        </div>
     );
 }
+
 
 function ProfileInfo() {
     return (
