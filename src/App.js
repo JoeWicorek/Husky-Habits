@@ -15,14 +15,14 @@ function App(props) {
   return (
     <div className="App">
       <HeaderTitle />
+      <Dashboard />
+      {/* <FeedScreen /> */} 
       {/* <EditTaskScreen /> */}
       {/* <CreateTaskScreen /> */}
-      {/* <FeedScreen /> */}
       {/* <UserProfile /> */}
-      <CreateTaskScreen />
+      {/* <AddFriendScreen /> */}
       <NavBar />
       <Footer />
-      {/* Other components and content */}
     </div>
   );
 }
