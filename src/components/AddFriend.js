@@ -1,13 +1,14 @@
 import React from 'react';
+import { TopDock } from './TopDock';
+import { Header } from './Header';
+import { NavBar } from './Navigation';
+import { Footer } from './Footer';
 
 export function AddFriendScreen() {
     return (
         <div>
-            <nav className="top-dock">
-                <a href="profile.html" className="nav-link left">Cancel</a>
-                <h1 className="nav-title">Add Friend</h1>
-                <a href="profile.html" className="nav-link right"> Done </a>
-            </nav>
+            <Header />
+            <TopDock dockTitleName = {"Add Friends"} />
 
             <main>
                 <section className="task-section">
@@ -34,6 +35,8 @@ export function AddFriendScreen() {
                     {/* Add other items here */}
                 </div>
             </main>
+            <NavBar />
+            <Footer />
         </div>
     );
 }
