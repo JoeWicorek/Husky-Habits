@@ -9,7 +9,7 @@ export function EditTaskScreen(props) {
         <div>
             <Header />
             <TopDock dockTitleName = {"Edit Task"}/>
-            <TaskSubmitForm uploadImage = {"Change Image"} />
+            <TaskSubmitForm username = {""} taskId = {""} />
             <Footer />
         </div>
     );

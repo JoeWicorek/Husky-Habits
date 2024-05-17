@@ -1,14 +1,12 @@
 import React from 'react';
+import { TopDock } from './TopDock';
+import { NavBar } from './Navigation';
+import { Footer } from './Footer';
 
 export function FeedScreen(props) {
     return (
         <div>
-            <nav className="top-dock">
-                <a href="index.html" className="nav-link left"></a>
-                <h1 className="nav-title">Your Friends Habits</h1>
-                <a href="index.html" className="nav-link right"></a>
-            </nav>
-
+            <TopDock dockTitleName = {"Your Friends Habits"} />
             <main>
                 <div className="feed-screen">
                     <div className="habit-card">
@@ -36,6 +34,8 @@ export function FeedScreen(props) {
                     </div>
                 </div>
             </main>
+            <NavBar />
+            <Footer />
         </div>
     );
 }

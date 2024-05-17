@@ -1,7 +1,13 @@
 import React from 'react';
 
 export function TaskSubmitForm(props) {
-    const uploadChangeImageTitle = props.uploadImage;
+    const username = props.username;
+    const taskID = props.taskId;
+
+    /*  IMPLEMENT TASK ID FUNCTIONALITY LATER
+    if (taskID)
+    */
+
 
     return (
         <form className="task-form">
@@ -10,7 +16,7 @@ export function TaskSubmitForm(props) {
                     <div className="circle-image">
                         <img src="img/circle.png" alt="Circle" />
                     </div>
-                    <a href="#" className="image-link">{uploadChangeImageTitle}</a>
+                    <a href="#" className="image-link">Upload Image</a>
                 </div>
                 <div className="task-name-display">
                     <input type="text" placeholder="Enter task name" name="taskName" />

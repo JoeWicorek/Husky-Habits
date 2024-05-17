@@ -5,9 +5,7 @@ export function UserProfile(props) {
     return (
         <div>
             <TopDock dockTitleName = {"Create Task"}/>
-            <main>
-                <TaskSubmitForm />
-            </main>
+            <TaskSubmitForm />
         </div>
     );
 }

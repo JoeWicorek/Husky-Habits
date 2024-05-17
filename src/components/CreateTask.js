@@ -9,7 +9,7 @@ export function CreateTaskScreen(props) {
         <div>
             <Header />
             <TopDock dockTitleName = {"Create Task"}/>
-            <TaskSubmitForm uploadImage = {"Upload Image"}/>
+            <TaskSubmitForm username = {""}/>
             <Footer />
         </div>
     );
